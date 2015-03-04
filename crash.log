@@ -1,0 +1,222 @@
+Crashlog created at 2015-03-03 22:47:27 -0800
+
+===== MESSAGE:
+
+Haml::SyntaxError: Illegal nesting: nesting within plain text is illegal.
+
+===== COMPILATION STACK:
+
+  - [item]   /stylesheet/ (rep default)
+
+===== STACK TRACE:
+
+  0. item /stylesheet/ (rep default):2
+  1. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/haml-4.0.6/lib/haml/parser.rb:255:in `plain'
+  2. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/haml-4.0.6/lib/haml/parser.rb:235:in `process_line'
+  3. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/haml-4.0.6/lib/haml/parser.rb:121:in `parse'
+  4. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/haml-4.0.6/lib/haml/engine.rb:66:in `initialize'
+  5. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/filters/haml.rb:22:in `new'
+  6. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/filters/haml.rb:22:in `run'
+  7. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/filter.rb:117:in `setup_and_run'
+  8. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/result_data/item_rep.rb:334:in `filter'
+  9. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/item_rep_proxy.rb:45:in `filter'
+  10. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/rule_context.rb:59:in `filter'
+  11. /home/zeigfreid/Github/Games/PuzzleScript/pushspace.io/Rules:23:in `block in parse'
+  12. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/rule.rb:68:in `instance_eval'
+  13. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/rule.rb:68:in `apply_to'
+  14. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/compiler.rb:385:in `compile_rep'
+  15. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/compiler.rb:341:in `block in compile_reps'
+  16. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/compiler.rb:334:in `loop'
+  17. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/compiler.rb:334:in `compile_reps'
+  18. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/compilation/compiler.rb:87:in `run'
+  19. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/base/source_data/site.rb:57:in `compile'
+  20. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/commands/compile.rb:383:in `block in run'
+  21. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/commands/compile.rb:425:in `run_listeners_while'
+  22. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/commands/compile.rb:382:in `run'
+  23. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/command_runner.rb:12:in `block in call'
+  24. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/error_handler.rb:72:in `handle_while'
+  25. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/error_handler.rb:24:in `handle_while'
+  26. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/command_runner.rb:11:in `call'
+  27. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command_dsl.rb:223:in `block in runner'
+  28. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:298:in `call'
+  29. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:298:in `run_this'
+  30. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:251:in `run'
+  31. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/commands/nanoc.rb:39:in `block in define'
+  32. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:298:in `call'
+  33. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:298:in `run_this'
+  34. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib/cri/command.rb:251:in `run'
+  35. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli.rb:58:in `block in run'
+  36. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/error_handler.rb:72:in `handle_while'
+  37. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli/error_handler.rb:24:in `handle_while'
+  38. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib/nanoc/cli.rb:56:in `run'
+  39. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/bin/nanoc:25:in `<top (required)>'
+  40. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/bin/nanoc:23:in `load'
+  41. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/bin/nanoc:23:in `<main>'
+  42. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/bin/ruby_executable_hooks:15:in `eval'
+
+===== VERSION INFORMATION:
+
+nanoc 3.7.5 © 2007-2015 Denis Defreyne.
+Running ruby 2.1.2 (2014-05-08) on x86_64-linux with RubyGems 2.2.2.
+
+===== SYSTEM INFORMATION:
+
+Linux umibe 3.13.0-34-generic #60-Ubuntu SMP Wed Aug 13 15:45:27 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+
+===== INSTALLED GEMS:
+
+  adsf 1.2.0
+  bundler 1.6.2
+  colored 1.2
+  cri 2.6.1
+  haml 4.0.6
+  nanoc 3.7.5
+  rack 1.6.0
+  sass 3.4.13
+  tilt 2.0.1
+
+===== ENVIRONMENT:
+
+BUNDLE_BIN_PATH => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/bin/bundle"
+BUNDLE_GEMFILE => "/home/zeigfreid/Github/Games/PuzzleScript/pushspace.io/Gemfile"
+CLUTTER_IM_MODULE => "xim"
+COLORTERM => "gnome-terminal"
+COMPIZ_CONFIG_PROFILE => "ubuntu"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-fMgEUohAb6"
+DEFAULTS_PATH => "/usr/share/gconf/ubuntu.default.path"
+DESKTOP_SESSION => "ubuntu"
+DISPLAY => ":0"
+GDMSESSION => "ubuntu"
+GDM_LANG => "en_CA"
+GEM_HOME => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc"
+GEM_PATH => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc:/home/zeigfreid/.rvm/gems/ruby-2.1.2@global"
+GNOME_DESKTOP_SESSION_ID => "this-is-deprecated"
+GNOME_KEYRING_CONTROL => "/run/user/1000/keyring-Lc74tr"
+GNOME_KEYRING_PID => "2277"
+GOBINPATH => "/home/zeigfreid/gocode/bin"
+GOPATH => "/home/zeigfreid/gocode"
+GPG_AGENT_INFO => "/run/user/1000/keyring-Lc74tr/gpg:0:1"
+GTK_IM_MODULE => "ibus"
+GTK_MODULES => "overlay-scrollbar:unity-gtk-module"
+HOME => "/home/zeigfreid"
+IM_CONFIG_PHASE => "1"
+INSTANCE => "Unity"
+IRBRC => "/home/zeigfreid/.rvm/rubies/ruby-2.1.2/.irbrc"
+JOB => "gnome-session"
+LANG => "en_CA.UTF-8"
+LANGUAGE => "en_CA:en"
+LC_ADDRESS => "en_CA.UTF-8"
+LC_IDENTIFICATION => "en_CA.UTF-8"
+LC_MEASUREMENT => "en_CA.UTF-8"
+LC_MONETARY => "en_CA.UTF-8"
+LC_NAME => "en_CA.UTF-8"
+LC_NUMERIC => "en_CA.UTF-8"
+LC_PAPER => "en_CA.UTF-8"
+LC_TELEPHONE => "en_CA.UTF-8"
+LC_TIME => "en_CA.UTF-8"
+LESSCLOSE => "/usr/bin/lesspipe %s %s"
+LESSOPEN => "| /usr/bin/lesspipe %s"
+LOGNAME => "zeigfreid"
+LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
+MANDATORY_PATH => "/usr/share/gconf/ubuntu.mandatory.path"
+MY_RUBY_HOME => "/home/zeigfreid/.rvm/rubies/ruby-2.1.2"
+NODE_PATH => "/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript"
+PAPERSIZE => "letter"
+PATH => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/bin:/home/zeigfreid/.rvm/gems/ruby-2.1.2@global/bin:/home/zeigfreid/.rvm/rubies/ruby-2.1.2/bin:/home/zeigfreid/.rvm/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/home/zeigfreid/gocode/bin"
+PS1 => "\\[\\e]0;\\u@\\h: \\w\\a\\]\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[0;33m\\]$(parse_git_branch)\\[\\033[00m\\]$ "
+PWD => "/home/zeigfreid/Github/Games/PuzzleScript/pushspace.io"
+QT4_IM_MODULE => "xim"
+QT_IM_MODULE => "ibus"
+QT_QPA_PLATFORMTHEME => "appmenu-qt5"
+RUBYLIB => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib"
+RUBYOPT => "-rbundler/setup"
+RUBY_VERSION => "ruby-2.1.2"
+SELINUX_INIT => "YES"
+SESSIONTYPE => "gnome-session"
+SHELL => "/bin/bash"
+SHLVL => "1"
+SSH_AGENT_LAUNCHER => "upstart"
+SSH_AGENT_PID => "2336"
+SSH_AUTH_SOCK => "/run/user/1000/keyring-Lc74tr/ssh"
+TERM => "xterm"
+TEXTDOMAIN => "im-config"
+TEXTDOMAINDIR => "/usr/share/locale/"
+UBUNTU_MENUPROXY => "1"
+UPSTART_EVENTS => "started starting"
+UPSTART_INSTANCE => ""
+UPSTART_JOB => "unity-settings-daemon"
+UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/2279"
+USER => "zeigfreid"
+VTE_VERSION => "3409"
+WINDOWID => "69214067"
+XAUTHORITY => "/home/zeigfreid/.Xauthority"
+XDG_CONFIG_DIRS => "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg"
+XDG_CURRENT_DESKTOP => "Unity"
+XDG_DATA_DIRS => "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/"
+XDG_GREETER_DATA_DIR => "/var/lib/lightdm-data/zeigfreid"
+XDG_RUNTIME_DIR => "/run/user/1000"
+XDG_SEAT => "seat0"
+XDG_SEAT_PATH => "/org/freedesktop/DisplayManager/Seat0"
+XDG_SESSION_ID => "c2"
+XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
+XDG_VTNR => "7"
+XMODIFIERS => "@im=ibus"
+_ => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/bin/nanoc"
+_ORIGINAL_GEM_PATH => "/home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc:/home/zeigfreid/.rvm/gems/ruby-2.1.2@global"
+_system_arch => "x86_64"
+_system_name => "Ubuntu"
+_system_type => "Linux"
+_system_version => "14.04"
+rvm_bin_path => "/home/zeigfreid/.rvm/bin"
+rvm_debug => "() {  (( ${rvm_debug_flag:-0} )) || return 0;\n if rvm_pretty_print stderr; then\n printf \"%b\" \"${rvm_debug_clr:-}$*${rvm_reset_clr:-}\\n\";\n else\n printf \"%b\" \"$*\\n\";\n fi 1>&2\n}"
+rvm_path => "/home/zeigfreid/.rvm"
+rvm_prefix => "/home/zeigfreid"
+rvm_version => "1.25.31 (master)"
+
+===== GEMFILE.LOCK:
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adsf (1.2.0)
+      rack (>= 1.0.0)
+    colored (1.2)
+    cri (2.6.1)
+      colored (~> 1.2)
+    haml (4.0.6)
+      tilt
+    nanoc (3.7.5)
+      cri (~> 2.3)
+    rack (1.6.0)
+    sass (3.4.13)
+    tilt (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  haml
+  nanoc
+  sass
+
+===== LOAD PATHS:
+
+  0. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib
+  1. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/sass-3.4.13/lib
+  2. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/nanoc-3.7.5/lib
+  3. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/haml-4.0.6/lib
+  4. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/tilt-2.0.1/lib
+  5. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/cri-2.6.1/lib
+  6. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/colored-1.2/lib
+  7. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/adsf-1.2.0/lib
+  8. /home/zeigfreid/.rvm/gems/ruby-2.1.2@nanoc/gems/rack-1.6.0/lib
+  9. /home/zeigfreid/.rvm/gems/ruby-2.1.2@global/gems/bundler-1.6.2/lib
+  10. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0
+  11. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby/2.1.0/x86_64-linux
+  12. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/site_ruby
+  13. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/vendor_ruby/2.1.0
+  14. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/vendor_ruby/2.1.0/x86_64-linux
+  15. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/vendor_ruby
+  16. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0
+  17. /home/zeigfreid/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/x86_64-linux
