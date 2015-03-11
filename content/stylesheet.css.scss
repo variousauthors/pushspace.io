@@ -1,3 +1,40 @@
+/* colors from the game
+
+( Player A/Blue
+#059CC0 wall
+#025B70 player
+#037590
+#27A6C4
+#4DB5CD floor
+
+( Player B/Orange
+#FF7F00 wall 
+#B55A00 player
+#E87300
+#FF952C
+#FFAC5B floor
+)
+)
+*/
+
+$blue_wall: #059CC0;
+$blue_player: #025B70;
+$blue_floor: #4DB5CD;
+
+$orange_wall: #FF7F00;
+$orange_player: #B55A00;
+$orange_floor: #FFAC5B;
+
+// that magical black
+$black: #292929;
+
+// spacing
+$unit: 20px;
+
+// typography
+$alpha: 40px;
+$bg_bottom: "bg-bottom.png";
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +43,12 @@
 }
 
 body {
-    background: #fff;
+    background-color: $black;
+    background-image: url($bg_bottom);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+
+    padding-bottom: 300px;
 }
 
 a {
@@ -22,30 +64,87 @@ a:hover {
     color: #f90;
 }
 
+.relative {
+    position: relative;
+}
+
+.center {
+    text-align: center;
+}
+
+.alpha {
+    font-size: $alpha;
+    font-height: $alpha;
+    color: $orange_wall;
+}
+
+.soft {
+    padding: $unit;
+}
+
+.soft-top {
+    padding-top: $unit;
+}
+
+.push {
+    margin: $unit;
+}
+
+.push-extrema {
+    margin-top: $unit;
+    margin-bottom: $unit;
+}
+
+#container > * {
+    width: 1024px;
+    margin: 0 auto;
+
+    h1 {
+        @extend .alpha;
+    }
+}
+
+#puzzlescript {
+    height: 640px;
+    background-color: black;
+}
+
 #main {
-    position: absolute;
+    .content {
+        min-height: 1000px;
+        border-radius: 5px;
+        background-color: $orange_floor;
+        color: $orange_player;
+        padding-right: 250px;
 
-    top: 40px;
-    left: 280px;
+        &:before {
+            background-color: $orange_wall;
+            content: "";
+            display: block;
+            right: 0;
+            top: 0;
+            position: absolute;
+            width: 200px;
+            height: 100%;
+        }
 
-    width: 500px;
-}
+        &:after {
+            background-color: $blue_player;
+            content: "";
+            display: block;
+            top: 40px - $unit;
+            right: 40px;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+    }
 
-#main h1 {
-    font-size: 40px;
-    font-weight: normal;
-
-    line-height: 40px;
-
-    letter-spacing: -1px;
-}
-
-#main p {
-    margin: 20px 0;
-
-    font-size: 15px;
-
-    line-height: 20px;
+    p {
+        margin: 20px 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
 }
 
 #main ul, #main ol {
@@ -60,42 +159,4 @@ a:hover {
 
 #main ul li {
     list-style-type: square;
-}
-
-#sidebar {
-    position: absolute;
-
-    top: 40px;
-    left: 20px;
-    width: 200px;
-
-    padding: 20px 20px 0 0;
-
-    border-right: 1px solid #ccc;
-
-    text-align: right;
-}
-
-#sidebar h2 {
-    text-transform: uppercase;
-
-    font-size: 13px;
-
-    color: #333;
-
-    letter-spacing: 1px;
-
-    line-height: 20px;
-}
-
-#sidebar ul {
-    list-style-type: none;
-
-    margin: 20px 0;
-}
-
-#sidebar li {
-    font-size: 14px;
-
-    line-height: 20px;
 }

@@ -1,3 +1,7 @@
+---
+
+---
+
 !!!
 %html{:lang => "en"}
   %head
@@ -8,20 +12,13 @@
         / you don't need to keep this, but it's cool for stats!
         %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
   %body
-    #main
-      = yield
-    #sidebar
-      %h2 Documentation
-      %ul
-        %li
-          %a{:href => "http://nanoc.ws/docs/"} Documentation
-        %li
-          %a{:href => "http://nanoc.ws/docs/tutorial/"} Getting Started
-      %h2 Community
-      %ul
-        %li
-          %a{:href => "http://groups.google.com/group/nanoc/"} Discussion Group
-        %li
-          %a{:href => "irc://chat.freenode.net/#nanoc"} IRC Channel
-        %li
-          %a{:href => "http://github.com/nanoc/nanoc/wiki/"} Wiki
+    #container.soft-top
+      #puzzlescript
+      #main
+        .content.push.relative.soft
+          = yield
+
+    %script{:src => "js/puzzlescript-embed.js", :type => "text/javascript"}
+
+:javascript
+  PuzzleScript.embed(document.getElementById("puzzlescript"), "e55198d4f105a6e7b4e0");
