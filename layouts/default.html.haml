@@ -11,9 +11,9 @@
       %link{:href => @items['/stylesheet/'].path, :rel => "stylesheet"}
         / you don't need to keep this, but it's cool for stats!
         %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
-  %body
+  %body.orange{ :tabindex => 1 }
     #container.soft-top
-      #puzzlescript
+      #puzzlescript{ :tabindex => 2 }
       #main
         .content.push.relative.soft
           = yield
@@ -21,4 +21,32 @@
     %script{:src => "js/puzzlescript-embed.js", :type => "text/javascript"}
 
 :javascript
-  PuzzleScript.embed(document.getElementById("puzzlescript"), "e55198d4f105a6e7b4e0");
+  var $puzzlescript = document.getElementById("puzzlescript")
+
+  PuzzleScript.embed($puzzlescript, "e55198d4f105a6e7b4e0");
+
+  (function () {
+    function swap (e) {
+      var className = this.className;
+
+      if (e.keyCode == 32) {
+        console.log("IN");
+        e.preventDefault();
+        this.className = (this.className == "orange")? "blue" : "orange";
+      }
+    }
+
+    document.body.onkeydown = swap;
+
+    $puzzlescript.onfocus = function () {
+      console.log("focus");
+      document.body.onkeydown = null;
+    };
+
+    $puzzlescript.onblur = function () {
+      console.log("blur");
+      document.body.onkeydown = swap;
+    };
+  }());
+
+

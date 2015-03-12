@@ -33,7 +33,8 @@ $unit: 20px;
 
 // typography
 $alpha: 40px;
-$bg_bottom: "bg-bottom.png";
+$bg_orange: "bg-orange.png";
+$bg_blue: "bg-blue.png";
 
 * {
     margin: 0;
@@ -44,7 +45,6 @@ $bg_bottom: "bg-bottom.png";
 
 body {
     background-color: $black;
-    background-image: url($bg_bottom);
     background-position: left bottom;
     background-repeat: no-repeat;
 
@@ -75,7 +75,6 @@ a:hover {
 .alpha {
     font-size: $alpha;
     font-height: $alpha;
-    color: $orange_wall;
 }
 
 .soft {
@@ -95,6 +94,61 @@ a:hover {
     margin-bottom: $unit;
 }
 
+body.orange {
+    background-image: url($bg_orange);
+
+    .alpha {
+        color: $orange_wall;
+    }
+
+    #main {
+        .content {
+            background-color: $orange_floor;
+            color: $orange_player;
+
+            &:before {
+                background-color: $orange_wall;
+            }
+
+            &:after {
+                background-color: $blue_player;
+            }
+
+            .blue {
+                display: none;
+            }
+        }
+    }
+}
+
+body.blue {
+    background-image: url($bg_blue);
+
+    .alpha {
+        color: $blue_wall;
+    }
+
+    #main {
+        .content {
+            background-color: $blue_floor;
+            color: $blue_player;
+
+            &:before {
+                background-color: $blue_wall;
+            }
+
+            &:after {
+                background-color: $orange_player;
+            }
+
+            .orange {
+                display: none;
+            }
+        }
+    }
+
+}
+
 #container > * {
     width: 1024px;
     margin: 0 auto;
@@ -107,18 +161,19 @@ a:hover {
 #puzzlescript {
     height: 640px;
     background-color: black;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 #main {
     .content {
         min-height: 1000px;
         border-radius: 5px;
-        background-color: $orange_floor;
-        color: $orange_player;
         padding-right: 250px;
 
         &:before {
-            background-color: $orange_wall;
             content: "";
             display: block;
             right: 0;
@@ -129,7 +184,6 @@ a:hover {
         }
 
         &:after {
-            background-color: $blue_player;
             content: "";
             display: block;
             top: 40px - $unit;
