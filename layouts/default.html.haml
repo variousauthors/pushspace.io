@@ -30,10 +30,8 @@
     script.addEventListener('load', function () { 
       function swap (e) {
         var className = this.className;
-        console.log("swap");
 
         if (e.keyCode == 32) {
-          console.log("IN");
           e.preventDefault();
           this.className = (this.className == "orange")? "blue" : "orange";
         }
@@ -42,7 +40,6 @@
       document.body.addEventListener('keydown', swap, false);
 
       $puzzlescript.onfocus = function () {
-        console.log("focus");
         document.body.removeEventListener('keydown', swap, false);
 
         document.addEventListener('keyup', onKeyUp, false);
@@ -50,7 +47,6 @@
       };
 
       $puzzlescript.onblur = function () {
-        console.log("blur");
         document.body.addEventListener('keydown', swap, false);
 
         document.removeEventListener('keyup', onKeyUp, false);
