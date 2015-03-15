@@ -9,6 +9,7 @@
       %title
         A Brand New nanoc Site - #{@item[:title]}
       %link{:href => @items['/stylesheet/'].path, :rel => "stylesheet"}
+      %link{:href => "/favicon.ico", :rel => "icon", :type => "image/x-icon"}
         / you don't need to keep this, but it's cool for stats!
         %meta{:content => "nanoc #{Nanoc::VERSION}", :name => "generator"}
   %body.orange{ :tabindex => 1 }
@@ -21,32 +22,43 @@
     %script{:src => "js/puzzlescript-embed.js", :type => "text/javascript"}
 
 :javascript
-  var $puzzlescript = document.getElementById("puzzlescript")
-
-  PuzzleScript.embed($puzzlescript, "e55198d4f105a6e7b4e0");
 
   (function () {
-    function swap (e) {
-      var className = this.className;
+    var $puzzlescript = document.getElementById("puzzlescript")
+    var script = PuzzleScript.embed($puzzlescript, "e55198d4f105a6e7b4e0");
 
-      if (e.keyCode == 32) {
-        console.log("IN");
-        e.preventDefault();
-        this.className = (this.className == "orange")? "blue" : "orange";
+    script.addEventListener('load', function () { 
+      function swap (e) {
+        var className = this.className;
+        console.log("swap");
+
+        if (e.keyCode == 32) {
+          console.log("IN");
+          e.preventDefault();
+          this.className = (this.className == "orange")? "blue" : "orange";
+        }
       }
-    }
 
-    document.body.onkeydown = swap;
+      document.body.addEventListener('keydown', swap, false);
 
-    $puzzlescript.onfocus = function () {
-      console.log("focus");
-      document.body.onkeydown = null;
-    };
+      $puzzlescript.onfocus = function () {
+        console.log("focus");
+        document.body.removeEventListener('keydown', swap, false);
 
-    $puzzlescript.onblur = function () {
-      console.log("blur");
-      document.body.onkeydown = swap;
-    };
+        document.addEventListener('keyup', onKeyUp, false);
+        document.addEventListener('keydown', onKeyDown, false);
+      };
+
+      $puzzlescript.onblur = function () {
+        console.log("blur");
+        document.body.addEventListener('keydown', swap, false);
+
+        document.removeEventListener('keyup', onKeyUp, false);
+        document.removeEventListener('keydown', onKeyDown, false);
+      };
+
+      $puzzlescript.focus();
+    });
   }());
 
 
